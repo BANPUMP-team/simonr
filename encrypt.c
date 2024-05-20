@@ -59,7 +59,12 @@ int main(int argc, char *argv[]) {
     pwdlen = strlen(passwd);
     passwd[pwdlen-1] = '\0';
     tcsetattr(STDIN_FILENO, TCSANOW, &original);
-    
+
+    if (pwdlen < 10) {
+        fprintf(stdout, "Password too short! Aborting.\n");
+        return (10);
+    }
+	
     simonr_init(&CTX, passwd);
     simonr_ctx_dup(&CTXcopy, &CTX);
 
