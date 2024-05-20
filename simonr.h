@@ -1,4 +1,4 @@
-#define SIMONR_ROUNDS 7 
+#define SIMONR_ROUNDS 8 
 
 /*
  * SimonR context
