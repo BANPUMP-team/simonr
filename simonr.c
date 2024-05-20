@@ -141,7 +141,7 @@ void simonr_ctx_dup(simonr_ctx *CTX1, simonr_ctx *CTX2) {
     for (i=0;i<256;i++) CTX1->Sbox1[i] = CTX2->Sbox1[i];
     for (i=0;i<256;i++) CTX1->Sbox2[i] = CTX2->Sbox2[i];
     for (i=0;i<256;i++) CTX1->Sbox3[i] = CTX2->Sbox3[i];
-    for (i=0;i<26;i++) CTX1->derived_key_r[i] = CTX2->derived_key_r[i];
+    for (i=0;i<44;i++) CTX1->derived_key_r[i] = CTX2->derived_key_r[i];
 }
 
 void simonr_reset_ctr(simonr_ctx *CTX) {
